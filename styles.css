@@ -7,19 +7,19 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #2c3e2d;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #000000;
+    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 50%, #8bc34a 100%);
     overflow-x: hidden;
 }
 
 .header {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.9);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
 }
 
 .nav {
@@ -32,7 +32,7 @@ body {
 }
 
 .logo h1 {
-    color: #2d5016;
+    color: #8bc34a;
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -45,14 +45,14 @@ body {
 
 .nav-links a {
     text-decoration: none;
-    color: #2c3e2d;
+    color: #ffffff;
     font-weight: 500;
     transition: all 0.3s ease;
     position: relative;
 }
 
 .nav-links a:hover {
-    color: #4caf50;
+    color: #8bc34a;
     transform: translateY(-2px);
 }
 
@@ -92,37 +92,39 @@ main {
 
 .hero-content h2 {
     font-size: 3.5rem;
-    color: white;
+    color: #000000;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
     animation: fadeInUp 1s ease-out;
 }
 
 .hero-content p {
     font-size: 1.3rem;
-    color: rgba(255, 255, 255, 0.9);
+    color: #000000;
     margin-bottom: 2rem;
     max-width: 500px;
     animation: fadeInUp 1s ease-out 0.2s both;
 }
 
 .cta-button {
-    background: linear-gradient(45deg, #4caf50, #8bc34a);
-    color: white;
-    border: none;
+    background: #000000;
+    color: #8bc34a;
+    border: 2px solid #8bc34a;
     padding: 15px 30px;
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     animation: fadeInUp 1s ease-out 0.4s both;
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+    background: #8bc34a;
+    color: #000000;
+    box-shadow: 0 6px 20px rgba(139, 195, 74, 0.4);
 }
 
 .hero-image {
@@ -135,11 +137,12 @@ main {
 .nature-animation {
     width: 400px;
     height: 400px;
-    background: radial-gradient(circle, #4caf50, #2e7d32);
+    background: radial-gradient(circle, #000000, #1b5e20);
     border-radius: 50%;
     position: relative;
     animation: float 6s ease-in-out infinite;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 3px solid #8bc34a;
 }
 
 .nature-animation::before {
@@ -154,14 +157,15 @@ main {
 
 .explore-section {
     padding: 80px 5%;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    background: linear-gradient(135deg, #388e3c 0%, #66bb6a 100%);
 }
 
 .explore-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2c3e2d;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .category-grid {
@@ -173,20 +177,21 @@ main {
 }
 
 .category-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    border: 2px solid transparent;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    border: 2px solid #8bc34a;
 }
 
 .category-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border-color: #4caf50;
+    box-shadow: 0 20px 40px rgba(139, 195, 74, 0.4);
+    border-color: #8bc34a;
+    background: rgba(0, 0, 0, 0.9);
 }
 
 .card-icon {
@@ -196,51 +201,53 @@ main {
 }
 
 .category-card h3 {
-    color: #2c3e2d;
+    color: #8bc34a;
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
 
 .category-card p {
-    color: #666;
+    color: #ffffff;
     line-height: 1.6;
 }
 
 .ai-section {
     padding: 80px 5%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
 }
 
 .ai-container h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .ai-interface {
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0.9);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 2px solid #8bc34a;
 }
 
 .upload-area {
-    border: 3px dashed #4caf50;
+    border: 3px dashed #8bc34a;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
     cursor: pointer;
+    color: #ffffff;
 }
 
 .upload-area:hover {
-    border-color: #2e7d32;
-    background: rgba(76, 175, 80, 0.05);
+    border-color: #8bc34a;
+    background: rgba(139, 195, 74, 0.1);
 }
 
 .upload-icon {
@@ -249,9 +256,9 @@ main {
 }
 
 .upload-btn {
-    background: linear-gradient(45deg, #4caf50, #8bc34a);
-    color: white;
-    border: none;
+    background: #8bc34a;
+    color: #000000;
+    border: 2px solid #8bc34a;
     padding: 12px 24px;
     border-radius: 25px;
     cursor: pointer;
@@ -262,7 +269,9 @@ main {
 
 .upload-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    background: #000000;
+    color: #8bc34a;
+    box-shadow: 0 4px 15px rgba(139, 195, 74, 0.4);
 }
 
 .text-input-area {
@@ -272,23 +281,26 @@ main {
 #natureDescription {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #e0e0e0;
+    border: 2px solid #8bc34a;
     border-radius: 10px;
     font-size: 1rem;
     font-family: inherit;
     resize: vertical;
     transition: border-color 0.3s ease;
+    background: #000000;
+    color: #ffffff;
 }
 
 #natureDescription:focus {
     outline: none;
-    border-color: #4caf50;
+    border-color: #8bc34a;
+    box-shadow: 0 0 10px rgba(139, 195, 74, 0.3);
 }
 
 .identify-btn {
-    background: linear-gradient(45deg, #ff6b6b, #ee5a52);
-    color: white;
-    border: none;
+    background: #8bc34a;
+    color: #000000;
+    border: 2px solid #8bc34a;
     padding: 12px 24px;
     border-radius: 25px;
     cursor: pointer;
@@ -300,27 +312,32 @@ main {
 
 .identify-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    background: #000000;
+    color: #8bc34a;
+    box-shadow: 0 4px 15px rgba(139, 195, 74, 0.4);
 }
 
 .results {
     margin-top: 2rem;
     padding: 1rem;
-    background: #f8f9fa;
+    background: rgba(139, 195, 74, 0.1);
     border-radius: 10px;
     display: none;
+    border: 1px solid #8bc34a;
+    color: #ffffff;
 }
 
 .learn-section {
     padding: 80px 5%;
-    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
 }
 
 .learn-section h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    color: #2c3e2d;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.3);
 }
 
 .facts-container {
@@ -332,11 +349,13 @@ main {
 }
 
 .fact-card, .quiz-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(0, 0, 0, 0.8);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
+    border: 2px solid #8bc34a;
+    color: #ffffff;
 }
 
 .fact-card:hover, .quiz-card:hover {
@@ -344,15 +363,15 @@ main {
 }
 
 .fact-card h3, .quiz-card h3 {
-    color: #2c3e2d;
+    color: #8bc34a;
     margin-bottom: 1rem;
     font-size: 1.5rem;
 }
 
 .fact-card button, .quiz-card button {
-    background: linear-gradient(45deg, #4caf50, #8bc34a);
-    color: white;
-    border: none;
+    background: #8bc34a;
+    color: #000000;
+    border: 2px solid #8bc34a;
     padding: 10px 20px;
     border-radius: 20px;
     cursor: pointer;
@@ -363,7 +382,9 @@ main {
 
 .fact-card button:hover, .quiz-card button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+    background: #000000;
+    color: #8bc34a;
+    box-shadow: 0 4px 15px rgba(139, 195, 74, 0.4);
 }
 
 .quiz-options {
@@ -374,32 +395,36 @@ main {
 
 .quiz-option {
     padding: 0.8rem;
-    background: #f0f0f0;
-    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid #8bc34a;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
+    color: #ffffff;
 }
 
 .quiz-option:hover {
-    background: #e8f5e8;
-    border-color: #4caf50;
+    background: rgba(139, 195, 74, 0.2);
+    border-color: #8bc34a;
 }
 
 .quiz-option.correct {
-    background: #c8e6c9;
-    border-color: #4caf50;
+    background: rgba(139, 195, 74, 0.3);
+    border-color: #8bc34a;
+    color: #000000;
 }
 
 .quiz-option.incorrect {
-    background: #ffcdd2;
+    background: rgba(244, 67, 54, 0.3);
     border-color: #f44336;
+    color: #ffffff;
 }
 
 .footer {
-    background: #2c3e2d;
-    color: white;
+    background: #000000;
+    color: #8bc34a;
     padding: 3rem 5% 1rem;
+    border-top: 3px solid #8bc34a;
 }
 
 .footer-content {
@@ -424,7 +449,7 @@ main {
 }
 
 .footer-section a {
-    color: #ccc;
+    color: #ffffff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -437,8 +462,8 @@ main {
     text-align: center;
     margin-top: 2rem;
     padding-top: 2rem;
-    border-top: 1px solid #444;
-    color: #ccc;
+    border-top: 1px solid #8bc34a;
+    color: #ffffff;
 }
 
 @keyframes fadeInUp {
