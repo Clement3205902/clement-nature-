@@ -9,8 +9,8 @@ body {
     line-height: 1.6;
     color: #000000;
     background: 
-        linear-gradient(rgba(46, 125, 50, 0.3), rgba(76, 175, 80, 0.2)),
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%2387CEEB"/><stop offset="100%" stop-color="%23E0F6FF"/></linearGradient><linearGradient id="mountain" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%234A5D23"/><stop offset="100%" stop-color="%232E3B15"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23sky)"/><polygon points="0,400 200,200 400,350 600,150 800,300 1000,100 1200,250 1200,800 0,800" fill="url(%23mountain)"/><g fill="%23228B22"><circle cx="150" cy="350" r="80" opacity="0.8"/><circle cx="180" cy="320" r="60" opacity="0.7"/><circle cx="120" cy="380" r="70" opacity="0.9"/><circle cx="350" cy="400" r="90" opacity="0.8"/><circle cx="380" cy="370" r="70" opacity="0.7"/><circle cx="320" cy="430" r="60" opacity="0.9"/><circle cx="550" cy="200" r="85" opacity="0.8"/><circle cx="580" cy="170" r="65" opacity="0.7"/><circle cx="520" cy="230" r="75" opacity="0.9"/><circle cx="750" cy="350" r="95" opacity="0.8"/><circle cx="780" cy="320" r="75" opacity="0.7"/><circle cx="720" cy="380" r="65" opacity="0.9"/><circle cx="950" cy="150" r="100" opacity="0.8"/><circle cx="980" cy="120" r="80" opacity="0.7"/><circle cx="920" cy="180" r="70" opacity="0.9"/></g><g fill="%23006400"><rect x="140" y="430" width="20" height="60" opacity="0.8"/><rect x="170" y="380" width="20" height="50" opacity="0.7"/><rect x="110" y="450" width="20" height="70" opacity="0.9"/><rect x="340" y="490" width="20" height="80" opacity="0.8"/><rect x="370" y="440" width="20" height="70" opacity="0.7"/><rect x="310" y="490" width="20" height="60" opacity="0.9"/><rect x="540" y="285" width="20" height="90" opacity="0.8"/><rect x="570" y="235" width="20" height="80" opacity="0.7"/><rect x="510" y="305" width="20" height="75" opacity="0.9"/><rect x="740" y="445" width="20" height="95" opacity="0.8"/><rect x="770" y="395" width="20" height="85" opacity="0.7"/><rect x="710" y="445" width="20" height="65" opacity="0.9"/><rect x="940" y="250" width="20" height="120" opacity="0.8"/><rect x="970" y="200" width="20" height="110" opacity="0.7"/><rect x="910" y="250" width="20" height="100" opacity="0.9"/></g></svg>') no-repeat center center fixed;
+        linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)),
+        url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') no-repeat center center fixed;
     background-size: cover;
     overflow-x: hidden;
     position: relative;
@@ -87,11 +87,12 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(8px);
     border-radius: 20px;
     margin-top: 2rem;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .hero-content {
@@ -166,11 +167,12 @@ main {
 
 .explore-section {
     padding: 80px 5%;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
     margin: 2rem 0;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .explore-section h2 {
@@ -190,22 +192,22 @@ main {
 }
 
 .category-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.85);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    border: 2px solid #2e7d32;
+    border: 2px solid rgba(46, 125, 50, 0.6);
     backdrop-filter: blur(10px);
 }
 
 .category-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 20px 40px rgba(46, 125, 50, 0.4);
-    border-color: #2e7d32;
-    background: rgba(255, 255, 255, 0.95);
+    border-color: rgba(46, 125, 50, 0.8);
+    background: rgba(255, 255, 255, 0.9);
 }
 
 .card-icon {
@@ -229,11 +231,12 @@ main {
 
 .ai-section {
     padding: 80px 5%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
     margin: 2rem 0;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .ai-container h2 {
@@ -247,11 +250,11 @@ main {
 .ai-interface {
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.85);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-    border: 2px solid #2e7d32;
+    border: 2px solid rgba(46, 125, 50, 0.6);
     backdrop-filter: blur(10px);
 }
 
@@ -352,11 +355,12 @@ main {
 
 .learn-section {
     padding: 80px 5%;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
     margin: 2rem 0;
     border-radius: 20px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .learn-section h2 {
@@ -376,12 +380,12 @@ main {
 }
 
 .fact-card, .quiz-card {
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.85);
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    border: 2px solid #2e7d32;
+    border: 2px solid rgba(46, 125, 50, 0.6);
     color: #1b5e20;
     backdrop-filter: blur(10px);
 }
