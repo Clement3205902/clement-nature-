@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NatureAI - Explore the Natural World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <h1>🌿 NatureAI</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#explore">Explore</a></li>
+                <li><a href="#identify">AI Identify</a></li>
+                <li><a href="#learn">Learn</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Discover Nature with AI</h2>
+                <p>Explore the wonders of the natural world through artificial intelligence. Identify plants, animals, and natural phenomena with cutting-edge technology.</p>
+                <button class="cta-button" onclick="scrollToExplore()">Start Exploring</button>
+            </div>
+            <div class="hero-image">
+                <div class="nature-animation"></div>
+            </div>
+        </section>
+
+        <section id="explore" class="explore-section">
+            <h2>Explore Nature Categories</h2>
+            <div class="category-grid">
+                <div class="category-card" data-category="plants">
+                    <div class="card-icon">🌱</div>
+                    <h3>Plants & Flora</h3>
+                    <p>Discover thousands of plant species with AI-powered identification</p>
+                </div>
+                <div class="category-card" data-category="animals">
+                    <div class="card-icon">🦋</div>
+                    <h3>Wildlife & Fauna</h3>
+                    <p>Learn about animals and their natural habitats</p>
+                </div>
+                <div class="category-card" data-category="ecosystems">
+                    <div class="card-icon">🏔️</div>
+                    <h3>Ecosystems</h3>
+                    <p>Explore different biomes and natural environments</p>
+                </div>
+                <div class="category-card" data-category="conservation">
+                    <div class="card-icon">🌍</div>
+                    <h3>Conservation</h3>
+                    <p>Learn about protecting our natural world</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="identify" class="ai-section">
+            <div class="ai-container">
+                <h2>AI Nature Identifier</h2>
+                <div class="ai-interface">
+                    <div class="upload-area" id="uploadArea">
+                        <div class="upload-content">
+                            <div class="upload-icon">📷</div>
+                            <p>Upload an image or describe what you see</p>
+                            <input type="file" id="imageUpload" accept="image/*" hidden>
+                            <button class="upload-btn" onclick="document.getElementById('imageUpload').click()">Choose Image</button>
+                        </div>
+                    </div>
+                    <div class="text-input-area">
+                        <textarea id="natureDescription" placeholder="Describe what you see in nature..." rows="4"></textarea>
+                        <button class="identify-btn" onclick="identifyNature()">Identify with AI</button>
+                    </div>
+                    <div class="results" id="aiResults"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="learn" class="learn-section">
+            <h2>Nature Facts & Insights</h2>
+            <div class="facts-container">
+                <div class="fact-card">
+                    <h3>Did You Know?</h3>
+                    <p id="natureFact">Loading amazing nature fact...</p>
+                    <button onclick="generateNewFact()">New Fact</button>
+                </div>
+                <div class="quiz-card">
+                    <h3>Nature Quiz</h3>
+                    <div id="quizContent">
+                        <p id="quizQuestion">Loading quiz question...</p>
+                        <div class="quiz-options" id="quizOptions"></div>
+                    </div>
+                    <button onclick="generateNewQuiz()">New Question</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NatureAI</h3>
+                <p>Connecting technology with the natural world</p>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Conservation Tips</a></li>
+                    <li><a href="#">Field Guides</a></li>
+                    <li><a href="#">Educational Content</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="#">Community</a></li>
+                    <li><a href="#">Newsletter</a></li>
+                    <li><a href="#">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NatureAI. Exploring nature through technology.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
