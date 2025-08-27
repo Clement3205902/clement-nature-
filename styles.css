@@ -8,8 +8,12 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     color: #000000;
-    background: linear-gradient(135deg, #2e7d32 0%, #4caf50 50%, #8bc34a 100%);
+    background: 
+        linear-gradient(rgba(46, 125, 50, 0.3), rgba(76, 175, 80, 0.2)),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><defs><linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%2387CEEB"/><stop offset="100%" stop-color="%23E0F6FF"/></linearGradient><linearGradient id="mountain" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="%234A5D23"/><stop offset="100%" stop-color="%232E3B15"/></linearGradient></defs><rect width="1200" height="800" fill="url(%23sky)"/><polygon points="0,400 200,200 400,350 600,150 800,300 1000,100 1200,250 1200,800 0,800" fill="url(%23mountain)"/><g fill="%23228B22"><circle cx="150" cy="350" r="80" opacity="0.8"/><circle cx="180" cy="320" r="60" opacity="0.7"/><circle cx="120" cy="380" r="70" opacity="0.9"/><circle cx="350" cy="400" r="90" opacity="0.8"/><circle cx="380" cy="370" r="70" opacity="0.7"/><circle cx="320" cy="430" r="60" opacity="0.9"/><circle cx="550" cy="200" r="85" opacity="0.8"/><circle cx="580" cy="170" r="65" opacity="0.7"/><circle cx="520" cy="230" r="75" opacity="0.9"/><circle cx="750" cy="350" r="95" opacity="0.8"/><circle cx="780" cy="320" r="75" opacity="0.7"/><circle cx="720" cy="380" r="65" opacity="0.9"/><circle cx="950" cy="150" r="100" opacity="0.8"/><circle cx="980" cy="120" r="80" opacity="0.7"/><circle cx="920" cy="180" r="70" opacity="0.9"/></g><g fill="%23006400"><rect x="140" y="430" width="20" height="60" opacity="0.8"/><rect x="170" y="380" width="20" height="50" opacity="0.7"/><rect x="110" y="450" width="20" height="70" opacity="0.9"/><rect x="340" y="490" width="20" height="80" opacity="0.8"/><rect x="370" y="440" width="20" height="70" opacity="0.7"/><rect x="310" y="490" width="20" height="60" opacity="0.9"/><rect x="540" y="285" width="20" height="90" opacity="0.8"/><rect x="570" y="235" width="20" height="80" opacity="0.7"/><rect x="510" y="305" width="20" height="75" opacity="0.9"/><rect x="740" y="445" width="20" height="95" opacity="0.8"/><rect x="770" y="395" width="20" height="85" opacity="0.7"/><rect x="710" y="445" width="20" height="65" opacity="0.9"/><rect x="940" y="250" width="20" height="120" opacity="0.8"/><rect x="970" y="200" width="20" height="110" opacity="0.7"/><rect x="910" y="250" width="20" height="100" opacity="0.9"/></g></svg>') no-repeat center center fixed;
+    background-size: cover;
     overflow-x: hidden;
+    position: relative;
 }
 
 .header {
@@ -83,6 +87,11 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    margin-top: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content {
@@ -157,7 +166,11 @@ main {
 
 .explore-section {
     padding: 80px 5%;
-    background: linear-gradient(135deg, #388e3c 0%, #66bb6a 100%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    margin: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .explore-section h2 {
@@ -177,21 +190,22 @@ main {
 }
 
 .category-card {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 20px;
     text-align: center;
     transition: all 0.3s ease;
     cursor: pointer;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    border: 2px solid #8bc34a;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border: 2px solid #2e7d32;
+    backdrop-filter: blur(10px);
 }
 
 .category-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(139, 195, 74, 0.4);
-    border-color: #8bc34a;
-    background: rgba(0, 0, 0, 0.9);
+    box-shadow: 0 20px 40px rgba(46, 125, 50, 0.4);
+    border-color: #2e7d32;
+    background: rgba(255, 255, 255, 0.95);
 }
 
 .card-icon {
@@ -201,19 +215,25 @@ main {
 }
 
 .category-card h3 {
-    color: #8bc34a;
+    color: #1b5e20;
     margin-bottom: 1rem;
     font-size: 1.3rem;
+    font-weight: 700;
 }
 
 .category-card p {
-    color: #ffffff;
+    color: #2e3b15;
     line-height: 1.6;
+    font-weight: 500;
 }
 
 .ai-section {
     padding: 80px 5%;
-    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%);
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    margin: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .ai-container h2 {
@@ -227,27 +247,29 @@ main {
 .ai-interface {
     max-width: 800px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border: 2px solid #8bc34a;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 2px solid #2e7d32;
+    backdrop-filter: blur(10px);
 }
 
 .upload-area {
-    border: 3px dashed #8bc34a;
+    border: 3px dashed #2e7d32;
     border-radius: 15px;
     padding: 2rem;
     text-align: center;
     margin-bottom: 2rem;
     transition: all 0.3s ease;
     cursor: pointer;
-    color: #ffffff;
+    color: #1b5e20;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .upload-area:hover {
-    border-color: #8bc34a;
-    background: rgba(139, 195, 74, 0.1);
+    border-color: #2e7d32;
+    background: rgba(46, 125, 50, 0.1);
 }
 
 .upload-icon {
@@ -281,20 +303,20 @@ main {
 #natureDescription {
     width: 100%;
     padding: 1rem;
-    border: 2px solid #8bc34a;
+    border: 2px solid #2e7d32;
     border-radius: 10px;
     font-size: 1rem;
     font-family: inherit;
     resize: vertical;
     transition: border-color 0.3s ease;
-    background: #000000;
-    color: #ffffff;
+    background: rgba(255, 255, 255, 0.9);
+    color: #1b5e20;
 }
 
 #natureDescription:focus {
     outline: none;
-    border-color: #8bc34a;
-    box-shadow: 0 0 10px rgba(139, 195, 74, 0.3);
+    border-color: #2e7d32;
+    box-shadow: 0 0 10px rgba(46, 125, 50, 0.3);
 }
 
 .identify-btn {
@@ -320,16 +342,21 @@ main {
 .results {
     margin-top: 2rem;
     padding: 1rem;
-    background: rgba(139, 195, 74, 0.1);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     display: none;
-    border: 1px solid #8bc34a;
-    color: #ffffff;
+    border: 1px solid #2e7d32;
+    color: #1b5e20;
+    backdrop-filter: blur(10px);
 }
 
 .learn-section {
     padding: 80px 5%;
-    background: linear-gradient(135deg, #4caf50 0%, #8bc34a 100%);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    margin: 2rem 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 .learn-section h2 {
@@ -349,13 +376,14 @@ main {
 }
 
 .fact-card, .quiz-card {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
-    border: 2px solid #8bc34a;
-    color: #ffffff;
+    border: 2px solid #2e7d32;
+    color: #1b5e20;
+    backdrop-filter: blur(10px);
 }
 
 .fact-card:hover, .quiz-card:hover {
@@ -363,9 +391,10 @@ main {
 }
 
 .fact-card h3, .quiz-card h3 {
-    color: #8bc34a;
+    color: #1b5e20;
     margin-bottom: 1rem;
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .fact-card button, .quiz-card button {
@@ -395,17 +424,18 @@ main {
 
 .quiz-option {
     padding: 0.8rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid #8bc34a;
+    background: rgba(255, 255, 255, 0.7);
+    border: 2px solid #2e7d32;
     border-radius: 10px;
     cursor: pointer;
     transition: all 0.3s ease;
-    color: #ffffff;
+    color: #1b5e20;
+    backdrop-filter: blur(5px);
 }
 
 .quiz-option:hover {
-    background: rgba(139, 195, 74, 0.2);
-    border-color: #8bc34a;
+    background: rgba(46, 125, 50, 0.2);
+    border-color: #2e7d32;
 }
 
 .quiz-option.correct {
@@ -496,6 +526,79 @@ main {
     animation: pulse 2s ease-in-out infinite;
 }
 
+/* Animated nature elements */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="%23228B22" opacity="0.6"><animate attributeName="cy" values="20;80;20" dur="8s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="%2332CD32" opacity="0.7"><animate attributeName="cy" values="30;85;30" dur="12s" repeatCount="indefinite"/></circle><circle cx="50" cy="10" r="1" fill="%236B8E23" opacity="0.5"><animate attributeName="cy" values="10;90;10" dur="10s" repeatCount="indefinite"/></circle></svg>') repeat;
+    background-size: 200px 200px;
+    z-index: -1;
+    animation: float-leaves 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Add some tree shadows */
+body::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 30%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.3) 0%, transparent 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* Enhanced section styling for nature background */
+section {
+    margin: 2rem 5%;
+    position: relative;
+}
+
+/* Floating animation for leaves */
+@keyframes float-leaves {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Add some depth with shadows */
+.hero, .explore-section, .ai-section, .learn-section {
+    position: relative;
+    z-index: 10;
+}
+
+/* Enhanced nature animation */
+.nature-animation {
+    background: radial-gradient(circle, rgba(34, 139, 34, 0.8), rgba(27, 94, 32, 0.6));
+    position: relative;
+    overflow: hidden;
+}
+
+.nature-animation::after {
+    content: '🌲🌳🌿🍃';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    animation: nature-sway 8s ease-in-out infinite;
+}
+
+@keyframes nature-sway {
+    0%, 100% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(-2deg) scale(1.05); }
+    75% { transform: rotate(2deg) scale(0.95); }
+}
+
 @media (max-width: 768px) {
     .hero {
         flex-direction: column;
@@ -523,5 +626,9 @@ main {
     
     .facts-container {
         grid-template-columns: 1fr;
+    }
+    
+    section {
+        margin: 1rem 2%;
     }
 }
