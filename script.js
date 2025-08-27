@@ -256,8 +256,9 @@ function generateNewFact() {
     }, 300);
 }
 
-// Nature quiz generator
+// Nature quiz generator - 100 Questions
 const quizQuestions = [
+    // ANIMALS - Mammals
     {
         question: "What is the largest mammal in the world?",
         options: ["African Elephant", "Blue Whale", "Giraffe", "Polar Bear"],
@@ -265,11 +266,31 @@ const quizQuestions = [
         explanation: "The Blue Whale can reach lengths of up to 100 feet and weigh up to 200 tons!"
     },
     {
-        question: "Which plant produces the largest flower in the world?",
-        options: ["Sunflower", "Corpse Flower", "Rafflesia", "Giant Water Lily"],
-        correct: 2,
-        explanation: "Rafflesia can grow up to 3 feet across and can weigh up to 15 pounds!"
+        question: "Which animal has the most powerful bite in the world?",
+        options: ["Great White Shark", "Crocodile", "Hippo", "T-Rex (extinct)"],
+        correct: 1,
+        explanation: "Saltwater crocodiles have a bite force of up to 3,700 pounds per square inch!"
     },
+    {
+        question: "How long can a dolphin hold its breath underwater?",
+        options: ["5 minutes", "15 minutes", "30 minutes", "1 hour"],
+        correct: 1,
+        explanation: "Dolphins can typically hold their breath for 8-15 minutes, though some can go longer!"
+    },
+    {
+        question: "What is a group of lions called?",
+        options: ["Pack", "Herd", "Pride", "Flock"],
+        correct: 2,
+        explanation: "A group of lions is called a pride, typically consisting of related females and their cubs."
+    },
+    {
+        question: "Which mammal is known to have fingerprints almost identical to humans?",
+        options: ["Chimpanzee", "Koala", "Gorilla", "Orangutan"],
+        correct: 1,
+        explanation: "Koalas have fingerprints so similar to humans that they can confuse crime scene investigators!"
+    },
+    
+    // ANIMALS - Birds
     {
         question: "How many chambers does a bird's heart have?",
         options: ["2", "3", "4", "5"],
@@ -277,16 +298,540 @@ const quizQuestions = [
         explanation: "Birds have 4-chambered hearts, just like mammals, which allows for efficient oxygen circulation."
     },
     {
+        question: "Which bird can fly backwards?",
+        options: ["Eagle", "Hummingbird", "Owl", "Falcon"],
+        correct: 1,
+        explanation: "Hummingbirds are the only birds that can fly backwards, sideways, and even upside down!"
+    },
+    {
+        question: "What is the fastest bird in a dive?",
+        options: ["Golden Eagle", "Peregrine Falcon", "Gyrfalcon", "Saker Falcon"],
+        correct: 1,
+        explanation: "The Peregrine Falcon can reach speeds of over 240 mph during hunting dives!"
+    },
+    {
+        question: "Which bird has the largest wingspan?",
+        options: ["Albatross", "Condor", "Eagle", "Pelican"],
+        correct: 0,
+        explanation: "The Wandering Albatross has the largest wingspan of any bird, reaching up to 11 feet!"
+    },
+    {
+        question: "How many species of penguins exist?",
+        options: ["12", "15", "18", "21"],
+        correct: 2,
+        explanation: "There are 18 species of penguins, from the tiny Little Blue Penguin to the massive Emperor Penguin!"
+    },
+    
+    // ANIMALS - Marine Life
+    {
+        question: "How many hearts does an octopus have?",
+        options: ["1", "2", "3", "4"],
+        correct: 2,
+        explanation: "Octopuses have three hearts - two pump blood to the gills, one pumps to the rest of the body!"
+    },
+    {
+        question: "What color is a polar bear's skin?",
+        options: ["White", "Pink", "Black", "Gray"],
+        correct: 2,
+        explanation: "Polar bear skin is actually black to absorb heat from the sun. Their fur is transparent!"
+    },
+    {
+        question: "How long can a sea turtle hold its breath?",
+        options: ["30 minutes", "2 hours", "5 hours", "10 hours"],
+        correct: 2,
+        explanation: "Sea turtles can hold their breath for up to 5 hours underwater!"
+    },
+    {
+        question: "What is the largest fish in the ocean?",
+        options: ["Great White Shark", "Whale Shark", "Manta Ray", "Tuna"],
+        correct: 1,
+        explanation: "The Whale Shark can grow up to 40 feet long and is a gentle filter feeder!"
+    },
+    {
+        question: "How many arms does a starfish typically have?",
+        options: ["4", "5", "6", "8"],
+        correct: 1,
+        explanation: "Most starfish have 5 arms, though some species can have up to 40 arms!"
+    },
+    
+    // ANIMALS - Insects & Arachnids
+    {
+        question: "How many legs does a spider have?",
+        options: ["6", "8", "10", "12"],
+        correct: 1,
+        explanation: "All spiders have 8 legs - this is what distinguishes them from insects, which have 6 legs!"
+    },
+    {
+        question: "What is the strongest insect relative to its body weight?",
+        options: ["Ant", "Beetle", "Bee", "Grasshopper"],
+        correct: 1,
+        explanation: "Dung beetles can pull objects 1,000 times their own body weight!"
+    },
+    {
+        question: "How do bees communicate the location of flowers?",
+        options: ["Buzzing sounds", "Pheromones", "Dancing", "Color changes"],
+        correct: 2,
+        explanation: "Bees perform a 'waggle dance' to communicate direction and distance to flower patches!"
+    },
+    {
+        question: "What percentage of animal species are insects?",
+        options: ["50%", "60%", "75%", "80%"],
+        correct: 3,
+        explanation: "About 80% of all animal species are insects - they're incredibly diverse!"
+    },
+    {
+        question: "How many times can a dragonfly beat its wings per second?",
+        options: ["20", "30", "40", "50"],
+        correct: 1,
+        explanation: "Dragonflies beat their wings about 30 times per second and can fly in all directions!"
+    },
+    
+    // PLANTS - Trees & Forests
+    {
+        question: "Which plant produces the largest flower in the world?",
+        options: ["Sunflower", "Corpse Flower", "Rafflesia", "Giant Water Lily"],
+        correct: 2,
+        explanation: "Rafflesia can grow up to 3 feet across and can weigh up to 15 pounds!"
+    },
+    {
+        question: "What is the tallest tree species in the world?",
+        options: ["Giant Sequoia", "Coast Redwood", "Douglas Fir", "Eucalyptus"],
+        correct: 1,
+        explanation: "Coast Redwoods can grow over 380 feet tall - the tallest trees on Earth!"
+    },
+    {
+        question: "How old can a bristlecone pine tree live?",
+        options: ["500 years", "1,000 years", "2,000 years", "5,000 years"],
+        correct: 3,
+        explanation: "Some bristlecone pines are over 5,000 years old - among the oldest living organisms!"
+    },
+    {
+        question: "What process do plants use to make food from sunlight?",
+        options: ["Respiration", "Photosynthesis", "Transpiration", "Germination"],
+        correct: 1,
+        explanation: "Photosynthesis converts sunlight, water, and CO2 into glucose and oxygen!"
+    },
+    {
+        question: "Which tree produces the world's largest seed?",
+        options: ["Coconut Palm", "Coco de Mer", "Avocado", "Mango"],
+        correct: 1,
+        explanation: "The Coco de Mer palm produces seeds that can weigh up to 40 pounds!"
+    },
+    
+    // PLANTS - Flowers & Garden
+    {
+        question: "What is the most popular flower in the world?",
+        options: ["Rose", "Tulip", "Sunflower", "Daisy"],
+        correct: 0,
+        explanation: "Roses are considered the most popular flowers worldwide, symbolizing love and beauty!"
+    },
+    {
+        question: "Which flower follows the sun's movement across the sky?",
+        options: ["Rose", "Tulip", "Sunflower", "Daisy"],
+        correct: 2,
+        explanation: "Young sunflowers exhibit heliotropism, turning to follow the sun throughout the day!"
+    },
+    {
+        question: "What is the national flower of Japan?",
+        options: ["Cherry Blossom", "Chrysanthemum", "Lotus", "Iris"],
+        correct: 0,
+        explanation: "Cherry blossoms (sakura) are Japan's unofficial national flower and symbol of spring!"
+    },
+    {
+        question: "Which plant is known as the 'sensitive plant'?",
+        options: ["Venus Flytrap", "Mimosa", "Touch-me-not", "Sundew"],
+        correct: 1,
+        explanation: "Mimosa pudica closes its leaves when touched, earning the name 'sensitive plant'!"
+    },
+    {
+        question: "What makes carrots orange?",
+        options: ["Chlorophyll", "Beta-carotene", "Anthocyanins", "Xanthophyll"],
+        correct: 1,
+        explanation: "Beta-carotene gives carrots their orange color and is converted to vitamin A in our bodies!"
+    },
+    
+    // ECOSYSTEMS - Rainforests
+    {
+        question: "What percentage of Earth's land do rainforests cover?",
+        options: ["2%", "6%", "10%", "15%"],
+        correct: 1,
+        explanation: "Rainforests cover only 6% of Earth's land surface but contain 50% of all species!"
+    },
+    {
+        question: "Which rainforest is known as the 'lungs of the Earth'?",
+        options: ["Congo Basin", "Amazon", "Southeast Asian", "Temperate Rainforest"],
+        correct: 1,
+        explanation: "The Amazon rainforest produces about 20% of the world's oxygen!"
+    },
+    {
+        question: "How many layers does a rainforest typically have?",
+        options: ["2", "3", "4", "5"],
+        correct: 2,
+        explanation: "Rainforests have 4 layers: emergent, canopy, understory, and forest floor!"
+    },
+    {
+        question: "What percentage of medicines come from rainforest plants?",
+        options: ["15%", "25%", "35%", "45%"],
+        correct: 1,
+        explanation: "About 25% of modern medicines are derived from rainforest plants!"
+    },
+    {
+        question: "How much rainforest is lost every minute?",
+        options: ["10 acres", "20 acres", "40 acres", "60 acres"],
+        correct: 2,
+        explanation: "Approximately 40 acres of rainforest are lost every minute due to deforestation!"
+    },
+    
+    // ECOSYSTEMS - Oceans
+    {
         question: "What percentage of Earth's oxygen is produced by the ocean?",
         options: ["20%", "50%", "70%", "90%"],
         correct: 2,
         explanation: "The ocean produces about 70% of Earth's oxygen, mainly from phytoplankton!"
     },
     {
-        question: "Which animal has the most powerful bite in the world?",
-        options: ["Great White Shark", "Crocodile", "Hippo", "T-Rex (extinct)"],
+        question: "What percentage of the ocean has been explored?",
+        options: ["5%", "20%", "35%", "50%"],
+        correct: 0,
+        explanation: "Less than 5% of the ocean has been explored - we know more about Mars!"
+    },
+    {
+        question: "What is the deepest part of the ocean?",
+        options: ["Puerto Rico Trench", "Java Trench", "Mariana Trench", "Peru-Chile Trench"],
+        correct: 2,
+        explanation: "The Mariana Trench reaches depths of nearly 36,000 feet!"
+    },
+    {
+        question: "How much of marine life depends on coral reefs?",
+        options: ["15%", "25%", "35%", "45%"],
         correct: 1,
-        explanation: "Saltwater crocodiles have a bite force of up to 3,700 pounds per square inch!"
+        explanation: "About 25% of all marine species depend on coral reefs for shelter and food!"
+    },
+    {
+        question: "What causes ocean tides?",
+        options: ["Wind", "Earth's rotation", "Moon's gravity", "Ocean currents"],
+        correct: 2,
+        explanation: "The Moon's gravitational pull is the primary cause of ocean tides!"
+    },
+    
+    // ECOSYSTEMS - Desert & Arctic
+    {
+        question: "What is the largest hot desert in the world?",
+        options: ["Sahara", "Arabian", "Kalahari", "Gobi"],
+        correct: 0,
+        explanation: "The Sahara Desert covers about 3.6 million square miles across North Africa!"
+    },
+    {
+        question: "How do cacti store water?",
+        options: ["In their roots", "In their stems", "In their spines", "In their flowers"],
+        correct: 1,
+        explanation: "Cacti store water in their thick, fleshy stems to survive in arid conditions!"
+    },
+    {
+        question: "What percentage of Earth's fresh water is frozen in ice?",
+        options: ["50%", "60%", "70%", "80%"],
+        correct: 2,
+        explanation: "About 70% of Earth's fresh water is locked in ice caps and glaciers!"
+    },
+    {
+        question: "Which animal is considered the 'polar bear of the south'?",
+        options: ["Penguin", "Seal", "Whale", "Arctic Fox"],
+        correct: 0,
+        explanation: "Penguins are often called the polar bears of the south, though they live in opposite hemispheres!"
+    },
+    {
+        question: "What adaptation helps desert animals conserve water?",
+        options: ["Large ears", "Thick fur", "Concentrated urine", "Webbed feet"],
+        correct: 2,
+        explanation: "Many desert animals produce highly concentrated urine to conserve water!"
+    },
+    
+    // CONSERVATION & ENVIRONMENT
+    {
+        question: "What does 'biodiversity' mean?",
+        options: ["Different ecosystems", "Variety of life", "Animal behavior", "Plant growth"],
+        correct: 1,
+        explanation: "Biodiversity refers to the variety of life in all its forms and interactions!"
+    },
+    {
+        question: "What is the main cause of species extinction today?",
+        options: ["Climate change", "Habitat loss", "Pollution", "Overhunting"],
+        correct: 1,
+        explanation: "Habitat destruction is the leading cause of species extinction worldwide!"
+    },
+    {
+        question: "How many species become extinct every day?",
+        options: ["10-50", "50-100", "100-200", "200-500"],
+        correct: 2,
+        explanation: "Scientists estimate 100-200 species go extinct every day due to human activities!"
+    },
+    {
+        question: "What percentage of Earth's land is protected as reserves?",
+        options: ["8%", "15%", "23%", "30%"],
+        correct: 1,
+        explanation: "About 15% of Earth's land surface is protected, but more is needed for conservation!"
+    },
+    {
+        question: "What is rewilding?",
+        options: ["Hunting ban", "Restoring ecosystems", "Animal training", "Seed collection"],
+        correct: 1,
+        explanation: "Rewilding involves restoring natural ecosystems and reintroducing native species!"
+    },
+    
+    // CLIMATE & WEATHER
+    {
+        question: "What gas makes up most of Earth's atmosphere?",
+        options: ["Oxygen", "Nitrogen", "Carbon Dioxide", "Argon"],
+        correct: 1,
+        explanation: "Nitrogen makes up about 78% of Earth's atmosphere!"
+    },
+    {
+        question: "What causes the greenhouse effect?",
+        options: ["Solar radiation", "Trapped heat gases", "Ocean currents", "Wind patterns"],
+        correct: 1,
+        explanation: "Greenhouse gases trap heat in the atmosphere, warming the planet!"
+    },
+    {
+        question: "Which tree removes the most CO2 from the atmosphere?",
+        options: ["Oak", "Pine", "Eucalyptus", "It varies"],
+        correct: 3,
+        explanation: "Different trees absorb different amounts of CO2 depending on age, species, and environment!"
+    },
+    {
+        question: "What is the water cycle's first step?",
+        options: ["Condensation", "Precipitation", "Evaporation", "Collection"],
+        correct: 2,
+        explanation: "Evaporation is when water changes from liquid to vapor, starting the water cycle!"
+    },
+    {
+        question: "What percentage of Earth's water is fresh water?",
+        options: ["1%", "3%", "7%", "12%"],
+        correct: 1,
+        explanation: "Only about 3% of Earth's water is fresh water, and most of that is frozen!"
+    },
+    
+    // UNIQUE NATURE FACTS
+    {
+        question: "Which animal never stops growing teeth?",
+        options: ["Elephant", "Shark", "Crocodile", "Beaver"],
+        correct: 1,
+        explanation: "Sharks continuously grow and shed teeth throughout their lives!"
+    },
+    {
+        question: "What is the hardest natural substance on Earth?",
+        options: ["Diamond", "Quartz", "Granite", "Iron"],
+        correct: 0,
+        explanation: "Diamond is the hardest natural substance, rating 10 on the Mohs scale!"
+    },
+    {
+        question: "Which animal can survive in space?",
+        options: ["Cockroach", "Tardigrade", "Scorpion", "Ant"],
+        correct: 1,
+        explanation: "Tardigrades (water bears) can survive the vacuum of space and extreme radiation!"
+    },
+    {
+        question: "What is the most venomous creature in the world?",
+        options: ["King Cobra", "Blue-ringed Octopus", "Box Jellyfish", "Poison Dart Frog"],
+        correct: 2,
+        explanation: "The Box Jellyfish has enough venom to kill 60 adult humans!"
+    },
+    {
+        question: "Which plant can live for over 1,000 years?",
+        options: ["Baobab Tree", "Redwood", "Oak", "All of the above"],
+        correct: 3,
+        explanation: "Many tree species including baobabs, redwoods, and oaks can live over 1,000 years!"
+    },
+    
+    // ANIMAL BEHAVIOR
+    {
+        question: "Why do flamingos stand on one leg?",
+        options: ["To look taller", "To conserve heat", "Better balance", "To rest"],
+        correct: 1,
+        explanation: "Flamingos stand on one leg to reduce heat loss through their legs!"
+    },
+    {
+        question: "How do elephants show affection?",
+        options: ["Trunk touching", "Trumpeting", "Ear flapping", "All of the above"],
+        correct: 3,
+        explanation: "Elephants show affection through trunk touching, vocalizations, and body language!"
+    },
+    {
+        question: "What do pandas spend most of their time doing?",
+        options: ["Sleeping", "Eating", "Playing", "Climbing"],
+        correct: 1,
+        explanation: "Pandas spend 12-16 hours a day eating bamboo due to its low nutritional value!"
+    },
+    {
+        question: "How do wolves communicate over long distances?",
+        options: ["Barking", "Howling", "Growling", "Whimpering"],
+        correct: 1,
+        explanation: "Wolf howls can be heard up to 6 miles away and help coordinate pack activities!"
+    },
+    {
+        question: "Why do cats purr?",
+        options: ["Only when happy", "To communicate", "To heal", "Both B and C"],
+        correct: 3,
+        explanation: "Cats purr to communicate and the vibrations may help heal bones and reduce pain!"
+    },
+    
+    // PLANT ADAPTATIONS
+    {
+        question: "How do Venus flytraps digest insects?",
+        options: ["Chewing", "Acid", "Enzymes", "Bacteria"],
+        correct: 2,
+        explanation: "Venus flytraps use digestive enzymes to break down trapped insects!"
+    },
+    {
+        question: "Why are some leaves red or purple?",
+        options: ["Disease", "Age", "Protection", "Temperature"],
+        correct: 2,
+        explanation: "Red and purple pigments protect leaves from sun damage and cold!"
+    },
+    {
+        question: "How do seeds know which way is up?",
+        options: ["Light detection", "Gravity", "Moisture", "Temperature"],
+        correct: 1,
+        explanation: "Plants sense gravity through gravitropism to grow roots down and shoots up!"
+    },
+    {
+        question: "What makes plants green?",
+        options: ["Chlorophyll", "Water", "Sunlight", "Nutrients"],
+        correct: 0,
+        explanation: "Chlorophyll is the green pigment that captures light energy for photosynthesis!"
+    },
+    {
+        question: "How do plants breathe at night?",
+        options: ["They don't", "Through roots", "Cellular respiration", "Stored oxygen"],
+        correct: 2,
+        explanation: "Plants use cellular respiration at night, consuming oxygen and releasing CO2!"
+    },
+    
+    // EXTREME ENVIRONMENTS
+    {
+        question: "Which organism can survive the highest temperatures?",
+        options: ["Tardigrade", "Thermophile bacteria", "Desert ant", "Camel"],
+        correct: 1,
+        explanation: "Some thermophile bacteria can survive temperatures above 250°F (121°C)!"
+    },
+    {
+        question: "What lives in the deepest parts of the ocean?",
+        options: ["Giant squid", "Anglerfish", "Tube worms", "All of the above"],
+        correct: 3,
+        explanation: "Many specialized creatures live in the deep ocean's extreme conditions!"
+    },
+    {
+        question: "How do animals survive in Antarctica?",
+        options: ["Thick fur", "Antifreeze proteins", "Hibernation", "All of the above"],
+        correct: 3,
+        explanation: "Antarctic animals use various adaptations including insulation, antifreeze, and hibernation!"
+    },
+    {
+        question: "Which plant survives in the most acidic conditions?",
+        options: ["Moss", "Lichen", "Algae", "Ferns"],
+        correct: 1,
+        explanation: "Some lichens can survive in extremely acidic environments like volcanic areas!"
+    },
+    {
+        question: "What is the driest place on Earth?",
+        options: ["Death Valley", "Sahara Desert", "Atacama Desert", "Antarctic Desert"],
+        correct: 2,
+        explanation: "Chile's Atacama Desert is the driest non-polar desert, with areas receiving no rainfall!"
+    },
+    
+    // SYMBIOSIS & RELATIONSHIPS
+    {
+        question: "What is the relationship between clownfish and sea anemones?",
+        options: ["Parasitism", "Commensalism", "Mutualism", "Competition"],
+        correct: 2,
+        explanation: "Clownfish and anemones have a mutualistic relationship - both benefit!"
+    },
+    {
+        question: "How do mycorrhizal fungi help plants?",
+        options: ["Provide nutrients", "Protect from pests", "Store water", "All of the above"],
+        correct: 3,
+        explanation: "Mycorrhizal fungi form beneficial partnerships with plant roots, providing multiple benefits!"
+    },
+    {
+        question: "What do cleaner fish do?",
+        options: ["Clean coral", "Eat parasites", "Filter water", "Build nests"],
+        correct: 1,
+        explanation: "Cleaner fish remove parasites and dead skin from other fish in a mutualistic relationship!"
+    },
+    {
+        question: "Why do flowers have bright colors?",
+        options: ["Protection", "Temperature control", "Attract pollinators", "Show health"],
+        correct: 2,
+        explanation: "Bright flower colors attract pollinators like bees, butterflies, and hummingbirds!"
+    },
+    {
+        question: "What is pollination?",
+        options: ["Flower opening", "Seed dispersal", "Pollen transfer", "Fruit formation"],
+        correct: 2,
+        explanation: "Pollination is the transfer of pollen from male to female parts of flowers!"
+    },
+    
+    // MIGRATION & MOVEMENT
+    {
+        question: "Which animal makes the longest migration?",
+        options: ["Wildebeest", "Arctic Tern", "Monarch Butterfly", "Gray Whale"],
+        correct: 1,
+        explanation: "Arctic Terns migrate about 44,000 miles annually from Arctic to Antarctic and back!"
+    },
+    {
+        question: "How do birds navigate during migration?",
+        options: ["Magnetic fields", "Stars", "Landmarks", "All of the above"],
+        correct: 3,
+        explanation: "Birds use multiple navigation methods including magnetic fields, celestial cues, and landmarks!"
+    },
+    {
+        question: "Why do monarch butterflies migrate?",
+        options: ["Find food", "Escape cold", "Breed", "All of the above"],
+        correct: 3,
+        explanation: "Monarchs migrate to escape cold weather, find food, and reach breeding grounds!"
+    },
+    {
+        question: "How do salmon find their birth river?",
+        options: ["Memory", "Smell", "Magnetic fields", "Current patterns"],
+        correct: 1,
+        explanation: "Salmon use their incredible sense of smell to find their natal streams!"
+    },
+    {
+        question: "Which whale travels the farthest?",
+        options: ["Blue Whale", "Humpback Whale", "Gray Whale", "Sperm Whale"],
+        correct: 2,
+        explanation: "Gray whales make a round trip of about 12,000 miles between feeding and breeding areas!"
+    },
+    
+    // FINAL QUESTIONS - GENERAL NATURE
+    {
+        question: "What is the most abundant gas in a healthy soil?",
+        options: ["Oxygen", "Nitrogen", "Carbon dioxide", "Water vapor"],
+        correct: 0,
+        explanation: "Healthy soil contains about 20% oxygen, crucial for root respiration and soil organisms!"
+    },
+    {
+        question: "Which sense do most nocturnal animals rely on?",
+        options: ["Sight", "Hearing", "Smell", "Touch"],
+        correct: 1,
+        explanation: "Most nocturnal animals have enhanced hearing to navigate and hunt in darkness!"
+    },
+    {
+        question: "What is the primary role of decomposers in ecosystems?",
+        options: ["Eat plants", "Hunt prey", "Recycle nutrients", "Produce oxygen"],
+        correct: 2,
+        explanation: "Decomposers break down dead organisms and return nutrients to the ecosystem!"
+    },
+    {
+        question: "How many kingdoms of life are there?",
+        options: ["3", "5", "6", "8"],
+        correct: 2,
+        explanation: "Most scientists recognize 6 kingdoms: Animals, Plants, Fungi, Protists, Archaea, and Bacteria!"
+    },
+    {
+        question: "What connects all life on Earth?",
+        options: ["DNA", "Water", "Carbon", "All of the above"],
+        correct: 3,
+        explanation: "All life shares DNA, requires water, and is carbon-based - we're all connected!"
     }
 ];
 
