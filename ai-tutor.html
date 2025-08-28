@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Study Buddy - Your Personal Learning Assistant</title>
+    <link rel="stylesheet" href="ai-tutor.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="logo">
+                <h1>🧠 AI Study Buddy</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#explainer">AI Explainer</a></li>
+                <li><a href="#study-tools">Study Tools</a></li>
+                <li><a href="#progress">Progress</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2>Transform Hard Classes into Easy Learning</h2>
+                <p>Upload your notes, paste lecture content, or describe any topic. Our AI will break it down into simple, step-by-step explanations that anyone can understand.</p>
+                <button class="cta-button" onclick="scrollToExplainer()">Start Learning Now</button>
+            </div>
+            <div class="hero-visual">
+                <div class="brain-animation">
+                    <div class="neuron"></div>
+                    <div class="neuron"></div>
+                    <div class="neuron"></div>
+                    <div class="connection"></div>
+                    <div class="connection"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="explainer" class="ai-explainer-section">
+            <h2>🤖 AI Explainer - Turn Complex into Simple</h2>
+            
+            <div class="input-methods">
+                <div class="method-tabs">
+                    <button class="tab-btn active" onclick="switchTab('text')">📝 Text/Notes</button>
+                    <button class="tab-btn" onclick="switchTab('file')">📄 Upload File</button>
+                    <button class="tab-btn" onclick="switchTab('topic')">💡 Ask About Topic</button>
+                </div>
+
+                <div class="tab-content">
+                    <div id="text-tab" class="tab-panel active">
+                        <h3>Paste Your Notes or Lecture Content</h3>
+                        <textarea id="contentInput" placeholder="Paste your lecture notes, textbook content, or any material you need explained...
+
+Example: 
+- Copy difficult paragraphs from your textbook
+- Paste professor's lecture notes
+- Add problem sets you don't understand
+- Include any confusing concepts
+
+I'll break it all down step-by-step!" rows="8"></textarea>
+                        <div class="difficulty-selector">
+                            <label>Explanation Level:</label>
+                            <select id="difficultyLevel">
+                                <option value="beginner">🌱 Complete Beginner</option>
+                                <option value="elementary">📚 Elementary Level</option>
+                                <option value="middle">🎓 Middle School Level</option>
+                                <option value="high">🏫 High School Level</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="file-tab" class="tab-panel">
+                        <h3>Upload Your Study Materials</h3>
+                        <div class="upload-area" id="fileUploadArea">
+                            <div class="upload-content">
+                                <div class="upload-icon">📁</div>
+                                <p>Drag & drop files here or click to upload</p>
+                                <p class="upload-hint">Supported: PDF, DOC, TXT, images of notes</p>
+                                <input type="file" id="fileInput" accept=".pdf,.doc,.docx,.txt,.jpg,.png,.jpeg" multiple hidden>
+                                <button class="upload-btn" onclick="document.getElementById('fileInput').click()">Choose Files</button>
+                            </div>
+                        </div>
+                        <div id="uploadedFiles" class="uploaded-files"></div>
+                    </div>
+
+                    <div id="topic-tab" class="tab-panel">
+                        <h3>Ask About Any Topic</h3>
+                        <input type="text" id="topicInput" placeholder="What subject or topic do you need help with?">
+                        <div class="subject-examples">
+                            <h4>Popular Subjects:</h4>
+                            <div class="subject-tags">
+                                <span class="subject-tag" onclick="setTopic('calculus')">Calculus</span>
+                                <span class="subject-tag" onclick="setTopic('organic chemistry')">Organic Chemistry</span>
+                                <span class="subject-tag" onclick="setTopic('physics')">Physics</span>
+                                <span class="subject-tag" onclick="setTopic('statistics')">Statistics</span>
+                                <span class="subject-tag" onclick="setTopic('economics')">Economics</span>
+                                <span class="subject-tag" onclick="setTopic('biology')">Biology</span>
+                                <span class="subject-tag" onclick="setTopic('computer science')">Computer Science</span>
+                                <span class="subject-tag" onclick="setTopic('psychology')">Psychology</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="explain-btn" onclick="generateExplanation()">
+                    <span class="btn-text">✨ Explain This Like I'm 5</span>
+                    <span class="btn-loading" style="display: none;">🧠 Thinking...</span>
+                </button>
+            </div>
+
+            <div id="explanationResult" class="explanation-result"></div>
+        </section>
+
+        <section id="study-tools" class="study-tools-section">
+            <h2>📚 Study Tools</h2>
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon">🧩</div>
+                    <h3>Concept Breakdown</h3>
+                    <p>Break complex topics into bite-sized pieces</p>
+                    <button onclick="openTool('breakdown')">Try It</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔗</div>
+                    <h3>Connection Map</h3>
+                    <p>See how different concepts connect</p>
+                    <button onclick="openTool('connections')">Try It</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">💡</div>
+                    <h3>Analogy Maker</h3>
+                    <p>Understand through real-world comparisons</p>
+                    <button onclick="openTool('analogies')">Try It</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">📝</div>
+                    <h3>Practice Quiz</h3>
+                    <p>Test your understanding with custom questions</p>
+                    <button onclick="openTool('quiz')">Try It</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🎯</div>
+                    <h3>Study Plan</h3>
+                    <p>Get a personalized learning roadmap</p>
+                    <button onclick="openTool('plan')">Try It</button>
+                </div>
+                <div class="tool-card">
+                    <div class="tool-icon">🔍</div>
+                    <h3>Key Terms</h3>
+                    <p>Extract and define important vocabulary</p>
+                    <button onclick="openTool('terms')">Try It</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="progress" class="progress-section">
+            <h2>📈 Your Learning Progress</h2>
+            <div class="progress-dashboard">
+                <div class="progress-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" id="topicsLearned">0</div>
+                        <div class="stat-label">Topics Explained</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="questionsAnswered">0</div>
+                        <div class="stat-label">Questions Answered</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" id="studyTime">0h</div>
+                        <div class="stat-label">Study Time</div>
+                    </div>
+                </div>
+                <div class="recent-topics">
+                    <h3>Recent Topics</h3>
+                    <div id="recentTopicsList" class="topics-list">
+                        <div class="empty-state">
+                            <p>Start learning to see your recent topics here!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tool Modals -->
+        <div id="toolModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 id="modalTitle">Study Tool</h3>
+                    <span class="close" onclick="closeModal()">&times;</span>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <!-- Tool content will be inserted here -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>AI Study Buddy</h3>
+                <p>Making learning accessible for everyone</p>
+            </div>
+            <div class="footer-section">
+                <h4>Features</h4>
+                <ul>
+                    <li>Step-by-step explanations</li>
+                    <li>Multiple learning methods</li>
+                    <li>Progress tracking</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li>Learning guides</li>
+                    <li>Study tips</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AI Study Buddy. Empowering students worldwide.</p>
+        </div>
+    </footer>
+
+    <script src="ai-tutor.js"></script>
+</body>
+</html>
